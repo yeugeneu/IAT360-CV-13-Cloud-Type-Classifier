@@ -16,32 +16,24 @@ Why would this be useful? Have you ever looked up at a strange cloud and wondere
 ## ☁️ Cloud Labels & Dataset
 The project utilizes the Cloud Classification Dataset featuring categories such as:
 
-1 Cirrus 
+1. Altocumulus (AC)
+2. Altostratus (AS)
+3. Cirrocumulus (CC)
+4. Cirrostratus (CS)
+5. Cirrus (CI)
+6. Contrails (CT) - While classified as 'Cirrus homogenitus' under official WMO guidelines, keeping them distinct optimizes object detection due to their unique linear geometry and distinct climate research value.
+7. Cumulonimbus (CB)
+8. Cumulus (CU)
+9. Nimbostratus (NS)
+10. Stratocumulus (SC)
+11. Stratus (ST) 
 
-2 Cirrostratus 
-
-3 Cirrocumulus 
-
-4 Altostratus 
-
-5 Altocumulus 
-
-6 Stratus 
-
-7 Stratocumulus 
-
-8 Cumulus 
-
-9 Cumulonimbus 
-
-10 Nimbostratus
-
-We will be aiming for around 200 images for each class in addition to a extra 30 original photos for each group member.
+We will be aiming for around 200 images for each class in addition to an extra 30 original photos for each group member.
 
 ## 👥 Team & Task Distribution
 Eugene Yu: GitHub & Jupyter Notebook repository management, dataset storage organization (OneDrive/Google Drive), model training & fine-tuning.
 
-Dalena Nguyen & Marielle Reyes Lao: Data collection, labeling, preprocessing, and presentation video editing.
+Dalena Nguyen & Marielle Reyes Lao: Data collection, labelling, preprocessing, and presentation video editing.
 
 Martina Hokama: Model evaluation and further fine-tuning.
 
