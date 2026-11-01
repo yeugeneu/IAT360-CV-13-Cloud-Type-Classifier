@@ -1,8 +1,8 @@
-# Cloud Type Classifier ☁️
-A deep learning-based computer vision project for multi-label cloud classification and short-term weather prediction (now-casting). Developed by CV Group 13.
+# Cloud Type Detection ☁️
+A deep learning-based computer vision project for multi-class cloud object detection and short-term weather prediction (nowcasting). Developed by CV Group 13.
 
 ## 📋 Project Overview
-Accurate cloud classification plays a vital role in short-term weather forecasting, climate studies, and outdoor event planning. This project implements a supervised deep learning model capable of classifying various cloud types—and supporting multi-label classification when multiple cloud formations appear simultaneously.
+Accurate cloud detection plays a vital role in short-term weather forecasting, climate studies, and outdoor event planning. This project implements a supervised deep learning model capable of classifying various cloud types—and supporting multi-label classification when multiple cloud formations appear simultaneously.
 
 ## Key Use Cases
 If you see a weird cloud shape and are curious about it, it will tell you what cloud you have + the relation to the weather
