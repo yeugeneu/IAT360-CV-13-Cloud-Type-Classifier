@@ -14,7 +14,18 @@ Why would this be useful? Have you ever looked up at a strange cloud and wondere
 * Safety & Operations: Assisting with storm tracking and weather-dependent activities.
 
 ## ☁️ Cloud Labels & Dataset
-The project utilizes the Cloud Classification Dataset featuring categories such as:
+### Data Resource 
+Primary Source: [cloud-qtheye/1 Dataset on Roboflow Universe ](https://universe.roboflow.com/ip2-kbjz5/cloud-qthye/dataset/1#)
+
+
+### Labels and Annotations
+
+Labels format should be object detection for YOLOv8
+```
+class x_center y_center width height
+```
+
+Below are the classes
 
 1. Altocumulus (AC)
 2. Altostratus (AS)
@@ -28,7 +39,8 @@ The project utilizes the Cloud Classification Dataset featuring categories such 
 10. Stratocumulus (SC)
 11. Stratus (ST) 
 
-We will be aiming for around 200 images for each class in addition to an extra 30 original photos for each group member.
+We will be adding an extra 30 images from each group member.
+
 
 ## 👥 Team & Task Distribution
 Eugene Yu: GitHub & Jupyter Notebook repository management, dataset storage organization (OneDrive/Google Drive), model training & fine-tuning.
