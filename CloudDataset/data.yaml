@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 11
+names: ['Altocumulus', 'Altostratus', 'Cirrocumulus', 'Cirrostratus', 'Cirrus', 'Contrails', 'Cumulonimbus', 'Cumulus', 'Nimbostratus', 'Stratocumulus', 'Stratus']
+
+roboflow:
+  workspace: ip2-kbjz5
+  project: cloud-qthye
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/ip2-kbjz5/cloud-qthye/dataset/1
