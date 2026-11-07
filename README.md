@@ -1,4 +1,4 @@
-# Cloud Type Detection ☁️
+# Cloud Spotter ☁️
 A deep learning-based computer vision project for multi-class cloud object detection and short-term weather prediction (nowcasting). Developed by CV Group 13.
 
 ## 📋 Project Overview
@@ -20,7 +20,7 @@ Primary Source: [cloud-qtheye/1 Dataset on Roboflow Universe ](https://universe.
 
 ### Labels and Annotations
 
-Labels format should be object detection for YOLOv8
+Label format should be object detection for YOLOv8
 ```
 class x_center y_center width height
 ```
@@ -43,7 +43,7 @@ We will be adding an extra 30 images from each group member.
 
 
 ## 👥 Team & Task Distribution
-Eugene Yu: GitHub & Jupyter Notebook repository management, dataset storage organization (OneDrive/Google Drive), model training & fine-tuning.
+Eugene Yu: GitHub & Jupyter Notebook repository management, dataset storage organization (OneDrive/Google Drive), data collection, file organization, model training & fine-tuning.
 
 Dalena Nguyen & Marielle Reyes Lao: Data collection, labelling, preprocessing, and presentation video editing.
 
