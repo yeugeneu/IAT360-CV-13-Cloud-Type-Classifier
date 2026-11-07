@@ -1,0 +1,21 @@
+path: All_data
+train: images/train
+#test: (test dataset folder path)
+val: images/val
+
+# Classes
+nc: 11 # replace based on your dataset's number of classes
+
+# Class names
+names:
+    0: Altocumulus
+    1: Altostratus
+    2: Cirrocumulus
+    3: Cirrostratus
+    4: Cirrus
+    5: Contrails
+    6: Cumulonimbus
+    7: Cumulus
+    8: Nimbostratus
+    9: Stratocumulus
+    10: Stratus
