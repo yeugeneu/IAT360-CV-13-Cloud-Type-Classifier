@@ -43,7 +43,7 @@ Label format (YOLO): one line per box, `class x_center y_center width height`, w
 **Test data (our own).** 120 images, 30 per member: 91 of our own phone photos, 20 web images and 9 images from the [Kaggle Cloud Types dataset](https://www.kaggle.com/datasets/newgnart/cloud-types) (MIT licence). Annotated with bounding boxes in [Label Studio](https://labelstud.io) and exported in YOLO format.
 
 > ⚠️ **Our test images are not stored on GitHub.** Some photos show people and the windows of homes, so for privacy they are shared only as a zip.
-> **Download [Members_Dataset.zip](ADD-LINK-HERE) and extract it into `All_data/`.** It contains `images/test/` and `labels/test/`, matching the empty folders in this repository. The images were re-saved during preprocessing, so they contain no location (EXIF) data.
+> **Download [Members_Dataset.zip](https://1sfu-my.sharepoint.com/:u:/r/personal/yya6_sfu_ca/Documents/CV%20Project%20Group%2013/Project%20Submission%20Files/Members_Dataset.zip?d=w46167006cbbe43928c0f9c271bec379d&csf=1&web=1&e=m5VUUH) and extract it into `All_data/`.** It contains `images/test/` and `labels/test/`, matching the empty folders in this repository. The images were re-saved during preprocessing, so they contain no location (EXIF) data.
 
 ---
 
