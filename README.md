@@ -15,7 +15,8 @@ Why would this be useful? Have you ever looked up at a strange cloud and wondere
 
 ## ☁️ Cloud Labels & Dataset
 ### Data Resource 
-Primary Source: [cloud-qtheye/1 Dataset on Roboflow Universe ](https://universe.roboflow.com/ip2-kbjz5/cloud-qthye/dataset/1#)
+Primary Source: [CloudDataset](https://app.roboflow.com/eugene-yu/cloud-qthye-mirzy/1) which was forked from [Roboflow Cloud Computer Vision Model dataset](https://universe.roboflow.com/ip2-kbjz5/cloud-qthye/browse?queryText=&pageSize=100&startingIndex=0&browseQuery=true) to remove all augmentated copies
+
 
 
 ### Labels and Annotations
