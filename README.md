@@ -1,60 +1,133 @@
 # Cloud Spotter ☁️
-A deep learning-based computer vision project for multi-class cloud object detection and short-term weather prediction (nowcasting). Developed by CV Group 13.
+**IAT 360 – Exploring Artificial Intelligence · Fall 2026 · Computer Vision Project · Group 13**
 
-## 📋 Project Overview
-Accurate cloud detection plays a vital role in short-term weather forecasting, climate studies, and outdoor event planning. This project implements a supervised deep learning model capable of classifying various cloud types—and supporting multi-label classification when multiple cloud formations appear simultaneously.
+Martina Hokama · Marielle Reyes Lao · Dalena Nguyen · Eugene Yu
 
-## Key Use Cases
-If you see a weird cloud shape and are curious about it, it will tell you what cloud you have + the relation to the weather
+Cloud Spotter detects and names cloud types in ground-level photos of the sky. A user takes a photo with their phone, the model draws a box around each cloud and labels its WMO cloud type, and an app could then explain what that cloud usually means for the weather in the next few hours (nowcasting).
 
-Why would this be useful? Have you ever looked up at a strange cloud and wondered what it was? Most people can’t tell a cumulus from a stratocumulus, and cloud type is one of the simplest visible clues to what the weather will do next. A cirrus sky often comes before a front, while cumulonimbus means storms. The model could become an app that tells you what cloud you’re looking at and what it usually means for the weather, which would also be useful for curious people, students, hikers, and anyone deciding whether to bring rain gear.
+- **Task:** supervised object detection
+- **Model:** YOLOv8s (Ultralytics), fine-tuned from pretrained `yolov8s.pt`
+- **Classes (11):** the 10 WMO cloud genera plus contrails
+- **Users:** people who are curious about the sky (walkers, hikers, commuters), using a smartphone
 
-## Possible extension:
-* Climate Research: Studying how cloud formations impact Earth's temperature and climate patterns.
-* Safety & Operations: Assisting with storm tracking and weather-dependent activities.
+📄 Report: [add link] · 🎥 Presentation video: [add link]
 
-## ☁️ Cloud Labels & Dataset
-### Data Resource 
-Primary Source: [CloudDataset](https://app.roboflow.com/eugene-yu/cloud-qthye-mirzy/1) which was forked from [Roboflow Cloud Computer Vision Model dataset](https://universe.roboflow.com/ip2-kbjz5/cloud-qthye/browse?queryText=&pageSize=100&startingIndex=0&browseQuery=true) to remove all augmented copies
+---
 
+## Classes
 
+| ID | Class | ID | Class |
+|---|---|---|---|
+| 0 | Altocumulus | 6 | Cumulonimbus |
+| 1 | Altostratus | 7 | Cumulus |
+| 2 | Cirrocumulus | 8 | Nimbostratus |
+| 3 | Cirrostratus | 9 | Stratocumulus |
+| 4 | Cirrus | 10 | Stratus |
+| 5 | Contrails | | |
 
-### Labels and Annotations
+Label format (YOLO): one line per box, `class x_center y_center width height`, with coordinates normalized to 0–1.
 
-Label format should be object detection for YOLOv8
+---
+
+## Dataset
+
+| Split | Images | Share | Source |
+|---|---|---|---|
+| Train | 2,016 | 76.3% | Roboflow (CCSN photos) |
+| Validation | 505 | 19.1% | Roboflow (CCSN photos) |
+| Test | 120 | 4.5% | Our own data |
+| **Total** | **2,641** | | |
+
+**Training and validation data.** The [Roboflow "Cloud" dataset (v1)](https://universe.roboflow.com/ip2-kbjz5/cloud-qthye/dataset/1) (CC BY 4.0), which contains the [CCSN](https://github.com/upuil/CCSN-Database) cloud photos with bounding boxes. We forked it and exported a version without Roboflow's augmentations (rotated, upside-down and grayscale copies), then removed photos duplicated across splits, leaving 2,521 unique images. Split 80/20 into train and validation (`random_state=42`).
+
+**Test data (our own).** 120 images, 30 per member: 91 of our own phone photos, 20 web images and 9 images from the [Kaggle Cloud Types dataset](https://www.kaggle.com/datasets/newgnart/cloud-types) (MIT licence). Annotated with bounding boxes in [Label Studio](https://labelstud.io) and exported in YOLO format.
+
+> ⚠️ **Our test images are not stored on GitHub.** Some photos show people and the windows of homes, so for privacy they are shared only as a zip.
+> **Download [Members_Dataset.zip](ADD-LINK-HERE) and extract it into `All_data/`.** It contains `images/test/` and `labels/test/`, matching the empty folders in this repository. The images were re-saved during preprocessing, so they contain no location (EXIF) data.
+
+---
+
+## How to run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yeugeneu/IAT360-CV-13-Cloud-Type-Classifier.git
+   ```
+2. Download `Members_Dataset.zip` (link above) and extract it into `All_data/`.
+3. Open `Cloud_type_detection.ipynb` in Google Colab and select a GPU runtime (**Runtime → Change runtime type → T4 GPU**).
+4. Upload the repository folder to Google Drive (we used `MyDrive/IAT 360/`), or change the paths at the top of the notebook to where you put it.
+5. Run the cells in order. To skip training, load the final model directly:
+   ```python
+   from ultralytics import YOLO
+   model = YOLO("weights/baseline_best.pt")
+   model.predict("your_sky_photo.jpg", save=True)
+   ```
+
+---
+
+## Repository structure
+
 ```
-class x_center y_center width height
+├── Cloud_type_detection.ipynb   # full pipeline: preprocessing → training → evaluation → tuning
+├── config.yaml                  # YOLO data config (relative paths)
+├── All_data/
+│   ├── images/{train,val,test}  # test/ is empty: extract the zip here
+│   └── labels/{train,val,test}
+├── weights/
+│   └── baseline_best.pt         # final selected model
+└── screenshots/                 # screenshots of each step
 ```
 
-Below are the classes
+---
 
-1. Altocumulus (AC)
-2. Altostratus (AS)
-3. Cirrocumulus (CC)
-4. Cirrostratus (CS)
-5. Cirrus (CI)
-6. Contrails (CT) - While classified as 'Cirrus homogenitus' under official WMO guidelines, keeping them distinct optimizes object detection due to their unique linear geometry and distinct climate research value.
-7. Cumulonimbus (CB)
-8. Cumulus (CU)
-9. Nimbostratus (NS)
-10. Stratocumulus (SC)
-11. Stratus (ST) 
+## Results
 
-We will be adding an extra 30 images from each group member.
+**Final model: the baseline** (YOLOv8s, 50 epochs, YOLO defaults: AdamW, lr0 = 0.000667, image size 640).
 
+| Set | Precision | Recall | F1 | Accuracy* | mAP50 | mAP50-95 |
+|---|---|---|---|---|---|---|
+| Validation | 0.439 | 0.607 | 0.509 | 0.535 | 0.536 | 0.468 |
+| Test (our photos) | 0.359 | 0.185 | 0.244 | 0.190 | 0.111 | 0.056 |
 
-## 👥 Team & Task Distribution
-Eugene Yu: GitHub & Jupyter Notebook repository management, dataset storage organization (OneDrive/Google Drive), data collection, file organization, model training & fine-tuning.
+*Object detection has no standard accuracy metric, so we define accuracy as the share of ground-truth clouds that the model detected and labelled with the correct type (missed clouds count as wrong).
 
-Dalena Nguyen & Marielle Reyes Lao: Data collection, labelling, preprocessing, and presentation video editing.
+- Best class: **Cumulonimbus** (mAP50 0.793). Weakest: **Stratus** (0.224), often confused with stratocumulus.
+- The large drop on our test photos comes mainly from the difference between the clean online training images and real phone photos (buildings, wires, mixed skies), and from different labelling styles.
+- A model combining every member's best hyperparameter (Adam, lr0 = 0.0001, box = 12, weight decay = 0.05) reached mAP50 0.516, below the baseline, so the baseline was selected.
 
-Martina Hokama: Model evaluation and further fine-tuning.
+---
 
-All Members: Project idea finalization, data collection, hyperparameter tuning, and report/presentation preparation.
+## Hyperparameter tuning
 
-## 📅 Project Timeline & Milestones
-* Oct 25: Project Idea Due
-* ~Oct 28: Data Collection, Labelling & Preprocessing
-* ~Nov 03: Baseline Model Training & Fine-Tuning
-* ~Nov 06: Model Evaluation & Final Hyperparameter Tuning\
-* Nov 08: Final Project Submission & Presentation
+Each member changed one hyperparameter to three values. Because of Colab GPU limits, every run (including a control with the baseline's setting) was trained for 15 epochs from `yolov8s.pt`, with everything else unchanged. The best values were then combined and trained for 50 epochs.
+
+| Member | Hyperparameter | Values tested (control) | Best (validation) |
+|---|---|---|---|
+| Martina Hokama | Learning rate `lr0` (optimizer set to AdamW) | 0.0001, 0.001, 0.01 (0.000667) | 0.0001 |
+| Dalena Nguyen | Optimizer | SGD, Adam, RMSProp (AdamW) | Adam |
+| Marielle Reyes Lao | Weight decay | 0, 0.005, 0.05 (0.0005) | [fill in] |
+| Eugene Yu | Box loss gain `box` | 3.0, 12.0, 20.0 (7.5) | 12.0 |
+
+Each member's runs and outputs: [link to each branch or notebook section]
+
+---
+
+## Team
+
+| Member | Contributions |
+|---|---|
+| Martina Hokama | [fill in] |
+| Marielle Reyes Lao | [fill in] |
+| Dalena Nguyen | [fill in] |
+| Eugene Yu | [fill in] |
+
+---
+
+## Credits and licences
+
+- **Roboflow "Cloud" dataset** by IP2, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): https://universe.roboflow.com/ip2-kbjz5/cloud-qthye
+- **CCSN Database**, Zhang, J., Liu, P., Zhang, F., & Song, Q. (2018). *CloudNet: Ground-based cloud classification with deep convolutional neural network.* Geophysical Research Letters, 45, 8665–8672. CC0: https://github.com/upuil/CCSN-Database
+- **Kaggle Cloud Types** by newgnart, MIT licence (notice included in the zip): https://www.kaggle.com/datasets/newgnart/cloud-types
+- **Ultralytics YOLOv8**: https://github.com/ultralytics/ultralytics
+- **Label Studio** (HumanSignal): https://labelstud.io
+- **WMO cloud classification**: https://wmo.int/world-meteorological-day-2017/classifying-clouds
