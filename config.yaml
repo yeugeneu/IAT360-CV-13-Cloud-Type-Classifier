@@ -1,6 +1,6 @@
 path: All_data
 train: images/train
-#test: (test dataset folder path)
+test: images/test
 val: images/val
 
 # Classes
