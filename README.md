@@ -108,7 +108,11 @@ Each member changed one hyperparameter to three values. Because of Colab GPU lim
 | Marielle Reyes Lao | Weight decay | 0, 0.005, 0.05 (0.0005) | [fill in] |
 | Eugene Yu | Box loss gain `box` | 3.0, 12.0, 20.0 (7.5) | 12.0 |
 
-Each member's runs and outputs: [link to each branch or notebook section]
+Each member's runs and outputs should be in the main branch notebook under these sections: 
+* Optimizer Hyperparameter (Delena)
+* Learning Rate Hyperparameter (Martina)
+* Weight Decay Hyperparameter (Marielle)
+* Box Hyperparameter (Eugene)
 
 ---
 
