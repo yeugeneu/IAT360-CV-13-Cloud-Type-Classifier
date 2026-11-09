@@ -40,7 +40,7 @@ Label format (YOLO): one line per box, `class x_center y_center width height`, w
 | Test | 120 | 4.5% | Our own data |
 | **Total** | **2,641** | | |
 
-**Training and validation data.** The [Roboflow "Cloud" dataset (v1)](https://universe.roboflow.com/ip2-kbjz5/cloud-qthye/dataset/1) (CC BY 4.0), which contains the [CCSN](https://github.com/upuil/CCSN-Database) cloud photos with bounding boxes. We forked it and exported a version without Roboflow's augmentations (rotated, upside-down and grayscale copies), then removed photos duplicated across splits, leaving 2,521 unique images. Split 80/20 into train and validation (`random_state=42`).
+**Training and validation data.** The [Roboflow "Cloud" dataset (v1)](https://universe.roboflow.com/ip2-kbjz5/cloud-qthye/dataset/1) (CC BY 4.0), which contains the [CCSN](https://github.com/upuil/CCSN-Database) cloud photos with bounding boxes. We forked it to a [Pre-Processing dataset ](https://app.roboflow.com/eugene-yu/cloud-qthye-mirzy/1) and exported a version without Roboflow's augmentations (rotated, upside-down and grayscale copies), then removed photos duplicated across splits, leaving 2,521 unique images. Split 80/20 into train and validation (`random_state=42`). 
 
 **Test data (our own).** 120 images, 30 per member: 91 of our own phone photos, 20 web images and 9 images from the [Kaggle Cloud Types dataset](https://www.kaggle.com/datasets/newgnart/cloud-types) (MIT licence). Annotated with bounding boxes in [Label Studio](https://labelstud.io) and exported in YOLO format.
 
