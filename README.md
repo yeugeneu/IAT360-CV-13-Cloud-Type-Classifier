@@ -109,7 +109,7 @@ Each member changed one hyperparameter to three values. Because of Colab GPU lim
 | Eugene Yu | Box loss gain `box` | 3.0, 12.0, 20.0 (7.5) | 12.0 |
 
 Each member's runs and outputs should be in the main branch notebook under these sections: 
-* Optimizer Hyperparameter (Delena)
+* Optimizer Hyperparameter (Dalena)
 * Learning Rate Hyperparameter (Martina)
 * Weight Decay Hyperparameter (Marielle)
 * Box Hyperparameter (Eugene)
@@ -122,7 +122,7 @@ Each member's runs and outputs should be in the main branch notebook under these
 |---|---|
 | Martina Hokama | [fill in] |
 | Marielle Reyes Lao | [fill in] |
-| Dalena Nguyen | [fill in] |
+| Dalena Nguyen | Data Collection, Data Labelling & Preprocessing, Hyperparameter tuning, Presentation, and Editing |
 | Eugene Yu | Data Collection, Data organization and Splitting, Baseline Model Training, Hyperparameter Tuning, Final Model Evaluation, Presentation, GitHub Repo Management, Meeting Notetaking, OneDrive Folder Management |
 
 
