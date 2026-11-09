@@ -10,7 +10,7 @@ Cloud Spotter detects and names cloud types in ground-level photos of the sky. A
 - **Classes (11):** the 10 WMO cloud genera plus contrails
 - **Users:** people who are curious about the sky (walkers, hikers, commuters), using a smartphone
 
-Report: https://1sfu-my.sharepoint.com/:w:/g/personal/yya6_sfu_ca/IQBUeCsJ7HNUQqifsrDW6m_zAUA4W7plNKpYUp22v9rOC0U?e=UmFaam
+Report: [Report Link](https://1sfu-my.sharepoint.com/:w:/g/personal/yya6_sfu_ca/IQBUeCsJ7HNUQqifsrDW6m_zAUA4W7plNKpYUp22v9rOC0U?e=UmFaam)
 
 🎥 Presentation video: [Presentation Video Link](https://1sfu-my.sharepoint.com/:v:/g/personal/yya6_sfu_ca/IQBk6nJrRptiQKmjsSfZ1hisAYmS7mes7kNQveTg42koDYs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=VxxrII)
 
@@ -124,7 +124,7 @@ Each member's runs and outputs should be in the main branch notebook under these
 |---|---|
 | Martina Hokama | Project coordination: tasks, deadlines, review/correction of work, guideline allignment; Data Collection, Hyperparameter Tuning, Repository and Notebook review and correction, README, Presentation, Report writing |
 | Marielle Reyes Lao | Data Collection, Hyperparameter Tuning, Presentation |
-| Dalena Nguyen | Data Collection, Data Labelling & Preprocessing, Hyperparameter tuning, Presentation, and Editing |
+| Dalena Nguyen | Data Collection, Data Labelling & Preprocessing, Hyperparameter tuning, Presentation, and Presentation/Report Editing |
 | Eugene Yu | Data Collection, Data organization and Splitting, Baseline Model Training, Hyperparameter Tuning, Final Model Evaluation, Presentation, GitHub Repo Management, Meeting Notetaking, OneDrive Folder Management |
 
 ---
