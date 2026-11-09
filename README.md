@@ -123,7 +123,7 @@ Each member's runs and outputs should be in the main branch notebook under these
 | Martina Hokama | [fill in] |
 | Marielle Reyes Lao | [fill in] |
 | Dalena Nguyen | [fill in] |
-| Eugene Yu | [fill in] |
+| Eugene Yu | Data Collection, Data organization and Splitting, Baseline Model Training, Hyperparameter Tuning, Final Model Evaluation, Presentation, GitHub Repo Management, Meeting Notetaking, OneDrive Folder Management |
 
 ---
 
