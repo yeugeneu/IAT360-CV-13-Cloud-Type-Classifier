@@ -127,31 +127,6 @@ Each member's runs and outputs should be in the main branch notebook under these
 | Dalena Nguyen | Data Collection, Data Labelling & Preprocessing, Hyperparameter tuning, Presentation, and Editing |
 | Eugene Yu | Data Collection, Data organization and Splitting, Baseline Model Training, Hyperparameter Tuning, Final Model Evaluation, Presentation, GitHub Repo Management, Meeting Notetaking, OneDrive Folder Management |
 
-
-## Team Timeline
-
-Oct 25  - Project Idea Finalization  - All Members 
-
-Data Collection  - All Members (30 images/videos per member) 
-
-Oct 28  - Data Labelling & Preprocessing  - Dalena Nguyen & Marielle Reyes Lao 
-
-~Oct 30 - Model Training & Fine-Tuning - Eugene Yu 
-
-~Nov 03 - Hyperparameter Tuning  - All Members 
-
-~Nov 03  - Model Evaluation - Martina Hokama 
-
-~Nov 06 - Final Fine-Tuning & Adjustments - All Members 
-
-~Nov 06  - Report & Presentation Preparation - All Members 
-
-Nov 08  - Presentation Video Editing  - Dalena Nguyen & Marielle Reyes Lao 
-
-Nov 08  - Final Project Submission & Presentation -  All Members 
-
-
-
 ---
 
 ## Credits and licences
