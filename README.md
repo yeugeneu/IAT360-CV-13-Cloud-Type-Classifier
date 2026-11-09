@@ -122,8 +122,8 @@ Each member's runs and outputs should be in the main branch notebook under these
 
 | Member | Contributions |
 |---|---|
-| Martina Hokama | [fill in] |
-| Marielle Reyes Lao | [fill in] |
+| Martina Hokama | Project coordination: tasks, deadlines, review/correction of work, guideline allignment; Data Collection, Hyperparameter Tuning, Repository and Notebook review and correction, README, Presentation, Report writing |
+| Marielle Reyes Lao | Data Collection, Hyperparameter Tuning, Presentation |
 | Dalena Nguyen | Data Collection, Data Labelling & Preprocessing, Hyperparameter tuning, Presentation, and Editing |
 | Eugene Yu | Data Collection, Data organization and Splitting, Baseline Model Training, Hyperparameter Tuning, Final Model Evaluation, Presentation, GitHub Repo Management, Meeting Notetaking, OneDrive Folder Management |
 
