@@ -128,7 +128,7 @@ Each member's runs and outputs should be in the main branch notebook under these
 | Eugene Yu | Data Collection, Data organization and Splitting, Baseline Model Training, Hyperparameter Tuning, Final Model Evaluation, Presentation, GitHub Repo Management, Meeting Notetaking, OneDrive Folder Management |
 
 
-## Team TimeLine
+## Team Timeline
 
 Oct 25  - Project Idea Finalization  - All Members 
 
