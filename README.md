@@ -11,7 +11,8 @@ Cloud Spotter detects and names cloud types in ground-level photos of the sky. A
 - **Users:** people who are curious about the sky (walkers, hikers, commuters), using a smartphone
 
 Report: https://1sfu-my.sharepoint.com/:w:/g/personal/yya6_sfu_ca/IQBUeCsJ7HNUQqifsrDW6m_zAUA4W7plNKpYUp22v9rOC0U?e=UmFaam
-🎥 Presentation video: https://1sfu-my.sharepoint.com/:v:/g/personal/yya6_sfu_ca/IQBk6nJrRptiQKmjsSfZ1hisAYmS7mes7kNQveTg42koDYs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=VxxrII
+
+🎥 Presentation video: [Presentation Video Link](https://1sfu-my.sharepoint.com/:v:/g/personal/yya6_sfu_ca/IQBk6nJrRptiQKmjsSfZ1hisAYmS7mes7kNQveTg42koDYs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=VxxrII)
 
 ---
 
