@@ -10,7 +10,7 @@ Cloud Spotter detects and names cloud types in ground-level photos of the sky. A
 - **Classes (11):** the 10 WMO cloud genera plus contrails
 - **Users:** people who are curious about the sky (walkers, hikers, commuters), using a smartphone
 
-📄 Report: [add link] · 🎥 Presentation video: [add link]
+Report: https://1sfu-my.sharepoint.com/:w:/g/personal/yya6_sfu_ca/IQBUeCsJ7HNUQqifsrDW6m_zAUA4W7plNKpYUp22v9rOC0U?e=UmFaam · 🎥 Presentation video: [add link]
 
 ---
 
@@ -124,6 +124,31 @@ Each member's runs and outputs should be in the main branch notebook under these
 | Marielle Reyes Lao | [fill in] |
 | Dalena Nguyen | [fill in] |
 | Eugene Yu | Data Collection, Data organization and Splitting, Baseline Model Training, Hyperparameter Tuning, Final Model Evaluation, Presentation, GitHub Repo Management, Meeting Notetaking, OneDrive Folder Management |
+
+
+## Team TimeLine
+
+Oct 25  - Project Idea Finalization  - All Members 
+
+Data Collection  - All Members (30 images/videos per member) 
+
+Oct 28  - Data Labelling & Preprocessing  - Dalena Nguyen & Marielle Reyes Lao 
+
+~Oct 30 - Model Training & Fine-Tuning - Eugene Yu 
+
+~Nov 03 - Hyperparameter Tuning  - All Members 
+
+~Nov 03  - Model Evaluation - Martina Hokama 
+
+~Nov 06 - Final Fine-Tuning & Adjustments - All Members 
+
+~Nov 06  - Report & Presentation Preparation - All Members 
+
+Nov 08  - Presentation Video Editing  - Dalena Nguyen & Marielle Reyes Lao 
+
+Nov 08  - Final Project Submission & Presentation -  All Members 
+
+
 
 ---
 
